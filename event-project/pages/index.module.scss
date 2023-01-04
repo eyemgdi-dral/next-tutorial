@@ -1,0 +1,37 @@
+.home{
+    
+    ul{
+        margin:auto;
+        padding:0;
+        text-align: center;
+        width: 500px;
+        box-sizing: border-box;
+        
+    }
+    li{        
+        list-style: none;
+        .card{
+            font-size: 0;
+            border:1px solid rgba(255, 255, 255,.5);
+            border-radius: 5px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            b{
+                display: inline-block;
+                width: 100%;
+                padding: 10px;
+                font-size: 14px;
+                box-sizing: border-box;
+                background: rgb(211, 211, 211);
+                color:rgb(50, 50, 50)
+
+            }
+        }
+    }
+    img{
+        width: 500px;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+    }
+}
