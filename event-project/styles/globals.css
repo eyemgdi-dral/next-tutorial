@@ -1,4 +1,11 @@
-body{
+body {
     background: rgb(60, 60, 60);
+    color: rgb(210, 210, 210);
+    margin: 0;
+    padding: 0;
+}
+
+body a {
+    text-decoration: none;
     color: rgb(210, 210, 210);
 }

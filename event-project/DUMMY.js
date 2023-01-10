@@ -1,6 +1,7 @@
 const arr = [
     {
         id: "0",
+        year: 2021,
         featured: true,
         author: "Alejandro Escamilla",
         width: 5000,
@@ -10,6 +11,7 @@ const arr = [
     },
     {
         id: "1",
+        year: 2021,
         featured: true,
         author: "Alejandro Escamilla",
         width: 5000,
@@ -19,6 +21,7 @@ const arr = [
     },
     {
         id: "2",
+        year: 2021,
         featured: false,
         author: "Alejandro Escamilla",
         width: 5000,
@@ -28,6 +31,7 @@ const arr = [
     },
     {
         id: "3",
+        year: 2021,
         featured: false,
         author: "Alejandro Escamilla",
         width: 5000,
@@ -37,6 +41,7 @@ const arr = [
     },
     {
         id: "4",
+        year: 2021,
         featured: false,
         author: "Alejandro Escamilla",
         width: 5000,
@@ -46,6 +51,7 @@ const arr = [
     },
     {
         id: "5",
+        year: 2021,
         featured: false,
         author: "Alejandro Escamilla",
         width: 5000,
@@ -55,6 +61,7 @@ const arr = [
     },
     {
         id: "6",
+        year: 2021,
         featured: false,
         author: "Alejandro Escamilla",
         width: 5000,
@@ -64,6 +71,7 @@ const arr = [
     },
     {
         id: "7",
+        year: 2021,
         featured: false,
         author: "Alejandro Escamilla",
         width: 4728,
@@ -73,6 +81,7 @@ const arr = [
     },
     {
         id: "8",
+        year: 2021,
         featured: false,
         author: "Alejandro Escamilla",
         width: 5000,
@@ -82,6 +91,7 @@ const arr = [
     },
     {
         id: "9",
+        year: 2021,
         featured: false,
         author: "Alejandro Escamilla",
         width: 5000,
@@ -91,6 +101,7 @@ const arr = [
     },
     {
         id: "10",
+        year: 2021,
         featured: false,
         author: "Paul Jarvis",
         width: 2500,
@@ -100,6 +111,7 @@ const arr = [
     },
     {
         id: "11",
+        year: 2021,
         featured: false,
         author: "Paul Jarvis",
         width: 2500,
@@ -109,6 +121,7 @@ const arr = [
     },
     {
         id: "12",
+        year: 2021,
         featured: false,
         author: "Paul Jarvis",
         width: 2500,
@@ -118,6 +131,7 @@ const arr = [
     },
     {
         id: "13",
+        year: 2021,
         featured: false,
         author: "Paul Jarvis",
         width: 2500,
@@ -127,6 +141,7 @@ const arr = [
     },
     {
         id: "14",
+        year: 2021,
         featured: false,
         author: "Paul Jarvis",
         width: 2500,
@@ -136,6 +151,7 @@ const arr = [
     },
     {
         id: "15",
+        year: 2021,
         featured: false,
         author: "Paul Jarvis",
         width: 2500,
@@ -145,6 +161,7 @@ const arr = [
     },
     {
         id: "16",
+        year: 2021,
         featured: false,
         author: "Paul Jarvis",
         width: 2500,
@@ -154,6 +171,7 @@ const arr = [
     },
     {
         id: "17",
+        year: 2021,
         featured: false,
         author: "Paul Jarvis",
         width: 2500,
@@ -163,6 +181,7 @@ const arr = [
     },
     {
         id: "18",
+        year: 2021,
         featured: false,
         author: "Paul Jarvis",
         width: 2500,
@@ -172,6 +191,7 @@ const arr = [
     },
     {
         id: "19",
+        year: 2021,
         featured: false,
         author: "Paul Jarvis",
         width: 2500,
@@ -181,6 +201,7 @@ const arr = [
     },
     {
         id: "20",
+        year: 2021,
         featured: false,
         author: "Aleks Dorohovich",
         width: 3670,
@@ -190,6 +211,7 @@ const arr = [
     },
     {
         id: "21",
+        year: 2021,
         featured: false,
         author: "Alejandro Escamilla",
         width: 3008,
@@ -199,6 +221,7 @@ const arr = [
     },
     {
         id: "22",
+        year: 2021,
         featured: false,
         author: "Alejandro Escamilla",
         width: 4434,
@@ -208,6 +231,7 @@ const arr = [
     },
     {
         id: "23",
+        year: 2021,
         featured: false,
         author: "Alejandro Escamilla",
         width: 3887,
@@ -217,6 +241,7 @@ const arr = [
     },
     {
         id: "24",
+        year: 2021,
         featured: false,
         author: "Alejandro Escamilla",
         width: 4855,
@@ -226,6 +251,7 @@ const arr = [
     },
     {
         id: "25",
+        year: 2022,
         featured: false,
         author: "Alejandro Escamilla",
         width: 5000,
@@ -235,6 +261,7 @@ const arr = [
     },
     {
         id: "26",
+        year: 2022,
         featured: false,
         author: "Vadim Sherbakov",
         width: 4209,
@@ -244,6 +271,7 @@ const arr = [
     },
     {
         id: "27",
+        year: 2022,
         featured: false,
         author: "Yoni Kaplan-Nadel",
         width: 3264,
@@ -253,6 +281,7 @@ const arr = [
     },
     {
         id: "28",
+        year: 2021,
         featured: false,
         author: "Jerry Adney",
         width: 4928,
@@ -262,6 +291,7 @@ const arr = [
     },
     {
         id: "29",
+        year: 2021,
         featured: false,
         author: "Go Wild",
         width: 4000,
@@ -273,4 +303,14 @@ const arr = [
 
 export const getFeaturedEvents = () => {
     return arr.filter((event) => event.featured);
+};
+
+export const getAllEvents = () => {
+    return arr;
+};
+export const getEvent = (id) => {
+    return arr.find((event) => event.id == id);
+};
+export const getEventFiltered = ({year, month}) => {
+    return arr.filter((event) => event.year == year);
 };
