@@ -6,6 +6,7 @@ import {getAllEvents} from "../../DUMMY";
 // import css from "./ProductList.module.scss";
 function ProductList() {
     const products = getAllEvents();
+    // const products;
     return (
         <div>
             <h2>ProductList</h2>
@@ -19,6 +20,8 @@ export async function getStaticProps() {
     const filePath = path.join(process.cwd(), "./DUMMY_PRODUCT.json");
     const jsonData = await fs.readFile(filePath);
     const data = JSON.parse(jsonData);
+
+    console.log("data", data);
 
     // if (!false) {
     //     console.log("redirecting");
