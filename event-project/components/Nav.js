@@ -16,6 +16,9 @@ function Nav() {
                 <li>
                     <Link href="/product">Pre-rendering</Link>
                 </li>
+                <li>
+                    <Link href="/sales">Sales</Link>
+                </li>
             </ul>
         </div>
     );

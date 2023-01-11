@@ -22,6 +22,10 @@ function ProductDetail() {
 //     };
 // }
 
+//TIP: If u use Dynamic Paths u need this func to get params.
+//TIP: Fallback Prop => true, false, and 'blocking'
+//TIP: 'blocking' will block code until method completes.
+
 // export async function getStaticPaths() {
 //     return {
 //         paths: [{params: {idProduct: "1"}}, {params: {idProduct: "2"}}, {params: {idProduct: "3"}}],
