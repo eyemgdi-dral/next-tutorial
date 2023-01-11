@@ -9,7 +9,7 @@ function ProductList() {
     return (
         <div>
             <h2>ProductList</h2>
-            <EventList events={products}></EventList>
+            <EventList type="product" events={products}></EventList>
         </div>
     );
 }

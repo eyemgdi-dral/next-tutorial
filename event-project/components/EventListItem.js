@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-function EventListItem({evt, className}) {
+function EventListItem({evt, className, type}) {
     return (
         <li key={evt.id}>
             <div className={className}>
@@ -8,7 +8,7 @@ function EventListItem({evt, className}) {
                 <br />
                 <img src={evt.download_url}></img>
             </div>
-            <Link href={`/event/${evt.id}`}>more</Link>
+            <Link href={`/${type ? type : "event"}/${evt.id}`}>more</Link>
         </li>
     );
 }
