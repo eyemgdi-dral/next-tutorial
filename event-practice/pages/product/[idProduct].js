@@ -5,37 +5,43 @@ import {Product as api} from "../api/products";
 //import css from './ProductDetail.module.scss'
 function ProductDetail() {
     const router = useRouter();
-    let idProduct = router.query.idProduct;
-    console.log("idProduct", idProduct);
-    console.log("router.query", router.query);
 
     const [product, setProduct] = useState(null);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        api.get(idProduct).then((res) => {
-            console.log("res", res);
+        if (!router.isReady) return;
 
-            setProduct(res);
-        });
-    }, []);
+        fetchData();
+    }, [router.isReady]);
 
-    if (!product) {
-        return <div>No Product</div>;
+    const fetchData = () => {
+        let idProduct = router.query.idProduct;
+
+        fetch(`https://meetup-ce29d.firebaseio.com/product/${idProduct}.json`)
+            .then((res) => res.json())
+            .then((res) => {
+                setProduct(res);
+            });
+    };
+
+    if (product) {
+        return (
+            <div>
+                Product Detail
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Name</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        );
     }
 
-    return (
-        <div>
-            Product Detail for {idProduct}
-            <table>
-                <tbody>
-                    <tr>
-                        <td>Name</td>
-                        <td>{product.name}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    );
+    return <div>No product</div>;
 }
 
 export default ProductDetail;
