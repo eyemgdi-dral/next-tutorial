@@ -1,3 +1,4 @@
+import Head from "next/head";
 import {useRouter} from "next/router";
 import {useEffect, useState} from "react";
 import {Product as api} from "../api/products";
@@ -28,6 +29,10 @@ function ProductDetail() {
     if (product) {
         return (
             <div>
+                <Head>
+                    <title>Detail page</title>
+                    <meta name="description" content="Detail page for event"></meta>
+                </Head>
                 Product Detail
                 <table>
                     <tbody>
