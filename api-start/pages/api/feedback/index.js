@@ -1,17 +1,7 @@
-import path from "path";
 import fs from "fs";
 
-export function bldPath() {
-    return path.join(process.cwd(), "data", "feedback.json");
-}
-export function extractFeedback(filePath) {
-    const fileData = fs.readFileSync(filePath);
-    const data = JSON.parse(fileData);
-    return data;
-}
-
 function handler(req, res) {
-    const filePath = bldPath();
+    const filePath = bldPath("feedback");
 
     if (req.method == "POST") {
         const feedback = {

@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {bldPath, extractFeedback} from "../api/feedback";
+import {bldPath, extractFeedback} from "../api/util";
 
 //import css from './listFeedback.module.scss'
 function listFeedback(props) {
@@ -7,7 +7,7 @@ function listFeedback(props) {
     const [feedback, setFeedback] = useState();
 
     function getDetail(id) {
-        fetch(`/api/${id}`)
+        fetch(`/api/feedback/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 console.log("data", data);
@@ -35,7 +35,7 @@ function listFeedback(props) {
 export default listFeedback;
 
 export async function getStaticProps() {
-    const filePath = bldPath();
+    const filePath = bldPath("feedback");
     const data = extractFeedback(filePath);
     return {props: {feedbacks: data}};
 }

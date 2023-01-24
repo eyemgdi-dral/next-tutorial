@@ -1,7 +1,7 @@
-import {bldPath, extractFeedback} from "./feedback";
+import {bldPath, extractFeedback} from "../util";
 
 function handler(req, res) {
-    const filePath = bldPath();
+    const filePath = bldPath("feedback");
     const data = extractFeedback(filePath);
     const feedback = data.find((fb) => fb.id == req.query.id);
 
