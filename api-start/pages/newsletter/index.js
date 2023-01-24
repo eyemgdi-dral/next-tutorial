@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {useEffect, useState} from "react";
 
 function Newsletter() {
@@ -17,7 +18,12 @@ function Newsletter() {
             Newsletters
             <ul>
                 {newsletters.map((nl, idx) => (
-                    <li key={idx}>{nl.name}</li>
+                    <li key={idx}>
+                        {nl.name}
+                        <Link href={`/newsletter/${nl.id}`}>
+                            <button>More</button>
+                        </Link>
+                    </li>
                 ))}
             </ul>
         </div>

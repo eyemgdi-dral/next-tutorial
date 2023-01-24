@@ -1,5 +1,6 @@
 import {bldPath, extractFeedback} from "../util";
 import fs from "fs";
+
 function handler(req, res) {
     const filePath = bldPath("newsletter");
     if (req.method == "POST") {
@@ -18,4 +19,5 @@ function handler(req, res) {
         res.status(200).json({message: "Success", newsletters});
     }
 }
+
 export default handler;
