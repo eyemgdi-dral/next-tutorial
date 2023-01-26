@@ -1,7 +1,13 @@
 import {useRef} from "react";
 
+import {useContext} from "react";
+import NotificationCtx from "../../store/notefication-ctx";
+
 //import css from './NewsletterCreate.module.scss'
 function NewsletterCreate() {
+    const notificationCtx = useContext(NotificationCtx);
+    const notification = notificationCtx.notification;
+
     const name = useRef();
     const email = useRef();
     const content = useRef();
@@ -20,6 +26,7 @@ function NewsletterCreate() {
             body: JSON.stringify(newsletter),
         }).then((res) => {
             console.log("res", res);
+            notificationCtx.showNotification({title: "New Notification", message: "Newsletter inserted Succesfully", status: "success"});
         });
     }
 
